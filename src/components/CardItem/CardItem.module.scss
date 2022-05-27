@@ -15,9 +15,8 @@
     position: absolute;
     margin: 20px 0 0 350px;
     font-size: 25px;
-    &:active {
-      color: red;
-    }
+    background-color: transparent;
+    border: none;
   }
 
   img {

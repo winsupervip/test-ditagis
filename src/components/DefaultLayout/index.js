@@ -10,6 +10,7 @@ import CardItem from "../CardItem/CardItem";
 
 import data from "../../data/data.json";
 import { useState } from "react";
+
 const cx = classNames.bind(styles);
 const PlaceOptions = [
   { value: "Đà Nẵng", label: "Đà Nẵng" },

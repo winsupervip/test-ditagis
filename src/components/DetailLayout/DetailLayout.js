@@ -24,39 +24,33 @@ function DetailLayout() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   let query = useQuery();
   const houseDetail = data.filter(
     (getIdHouse) => query.get("id") === getIdHouse.id
   );
-
+  const detail = houseDetail[0];
   return (
     <div className={cx("wrapper")}>
       <Header />
       <div className={cx("slider")}>
         <Slider {...settings}>
-          <div>
-            <img
-              src={require(`../../assets/1629738591-masteri-west-heights (1).png`)}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              alt=""
-              src={require("../../assets/1629738595-z2489929341672c26e74079a856650db74a55df1be3b68.png")}
-            />
-          </div>
+          {detail.images.map((item, index) => (
+            <div key={index}>
+              <img src={require(`../../${item}`)} alt="" />
+            </div>
+          ))}
         </Slider>
       </div>
       <div className={cx("content")}>
         <div className={cx("content-header")}>
           <div className={cx("header-left")}>
-            <div className={cx("title")}>{houseDetail[0].title}</div>
-            <div className={cx("address")}>{houseDetail[0].address}</div>
-            <div className={cx("area")}>Diện tích: {houseDetail[0].area}m2</div>
+            <div className={cx("title")}>{detail.title}</div>
+            <div className={cx("address")}>{detail.address}</div>
+            <div className={cx("area")}>Diện tích: {detail.area}m2</div>
           </div>
           <div className={cx("price")}>
-            {houseDetail[0].price.from} - {houseDetail[0].price.to} tỷ
+            {detail.price.from} - {detail.price.to} tỷ
           </div>
         </div>
         <h3>Thông tin chi tiết</h3>
