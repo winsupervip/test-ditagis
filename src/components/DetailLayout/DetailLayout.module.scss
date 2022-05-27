@@ -1,0 +1,46 @@
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+.slider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.content {
+  margin: 100px;
+  font-family: system-ui, system-ui, sans-serif;
+  color: #333;
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    .header-left {
+      .title {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      .address,
+      .area {
+        font-size: 30px;
+        font-weight: 500px;
+      }
+    }
+    .price {
+      font-size: 70px;
+      font-weight: 700;
+    }
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .desc {
+    font-weight: 500;
+  }
+}
